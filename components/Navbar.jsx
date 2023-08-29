@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+"use client"
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
-import React from "react";
+import React, { Fragment } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -8,6 +10,7 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const currentUser = { displayName: "felix franko" };
+  console.log(currentUser);
   return (
     <>
       <Disclosure as="nav" className="text-white fixed top-0 z-20 w-full">
@@ -92,7 +95,7 @@ const Navbar = () => {
                             "block px-4 py-2 text-sm text-gray-700 cursor-pointer"
                           )}
                           role="button"
-                          onClick={() => logOut()}
+                        //   onClick={() => logOut()}
                         >
                           Log out
                         </span>
